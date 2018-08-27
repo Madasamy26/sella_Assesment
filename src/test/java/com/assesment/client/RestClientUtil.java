@@ -48,26 +48,7 @@ public class RestClientUtil {
         URI uri = restTemplate.postForLocation(url, requestEntity);
         System.out.println(uri.getPath());    	
     }
-    public void updateArticleDemo() {
-    	HttpHeaders headers = new HttpHeaders();
-    	headers.setContentType(MediaType.APPLICATION_JSON);
-        RestTemplate restTemplate = new RestTemplate();
-	    String url = "http://localhost:8080/user/article";
-	    Article objArticle = new Article();
-	    objArticle.setArticleId(1);
-	    objArticle.setTitle("Update:Java Concurrency");
-	    objArticle.setCategory("Java");
-        HttpEntity<Article> requestEntity = new HttpEntity<Article>(objArticle, headers);
-        restTemplate.put(url, requestEntity);
-    }
-    public void deleteArticleDemo() {
-    	HttpHeaders headers = new HttpHeaders();
-    	headers.setContentType(MediaType.APPLICATION_JSON);
-        RestTemplate restTemplate = new RestTemplate();
-	    String url = "http://localhost:8080/user/article/{id}";
-        HttpEntity<Article> requestEntity = new HttpEntity<Article>(headers);
-        restTemplate.exchange(url, HttpMethod.DELETE, requestEntity, Void.class, 1);        
-    }
+   
     public static void main(String args[]) {
     	RestClientUtil util = new RestClientUtil();
         //util.getArticleByIdDemo();
