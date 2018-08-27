@@ -1,0 +1,8 @@
+com\assesment\controller\ArticleController.class
+com\assesment\dao\ArticleDAO.class
+com\assesment\entity\Article.class
+com\assesment\entity\ArticleRowMapper.class
+com\assesment\dao\IArticleDAO.class
+com\assesment\service\ArticleService.class
+com\assesment\MyApplication.class
+com\assesment\service\IArticleService.class
